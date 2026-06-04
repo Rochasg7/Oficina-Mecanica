@@ -1,10 +1,11 @@
 package classepeca;
 
-public class peca {
+public class Peca {
 
-    public int codigo;
-    public String descricao;
-    public int quantidade;
-    public double preco;
-
+    String id;
+    String nome;
+    String tipo;
+    double valor;
+    int quantidade;
+    String placaVeiculo;
 }
