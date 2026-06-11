@@ -23,8 +23,8 @@ public class PersistenciaPeca {
                                 p.nome + ";" +
                                 p.tipo + ";" +
                                 p.valor + ";" +
-                                p.quantidade + ";" +
-                                p.placaVeiculo);
+                                p.quantidade + ";" 
+                                );
 
                 writer.write("\n");
             }
@@ -61,7 +61,7 @@ public class PersistenciaPeca {
                 peca.tipo = p[2];
                 peca.valor = Double.parseDouble(p[3]);
                 peca.quantidade = Integer.parseInt(p[4]);
-                peca.placaVeiculo = p[5];
+                ;
 
                 CadastroPeca.pecas[CadastroPeca.totalPecas] = peca;
                 CadastroPeca.totalPecas++;

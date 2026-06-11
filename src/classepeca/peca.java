@@ -7,5 +7,4 @@ public class Peca {
     String tipo;
     double valor;
     int quantidade;
-    String placaVeiculo;
 }

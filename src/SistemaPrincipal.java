@@ -9,20 +9,19 @@ import classeveiculo.PersistenciaVeiculo;
 import classepeca.MenuPeca;
 import classepeca.PersistenciaPeca;
 
+import classeordemdeservico.MenuOS;
+import classeordemdeservico.PersistenciaOS;
+
 public class SistemaPrincipal {
 
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        // Carrega os mecânicos salvos no CSV
         PersistenciaMecanico.carregarmecanicoCSV();
-
-        // Carrega os veículos salvos no CSV
         PersistenciaVeiculo.carregarVeiculosCSV();
-
-        // Carrega as peças salvas no CSV
         PersistenciaPeca.carregarPecasCSV();
+        PersistenciaOS.carregarOSCSV();
 
         int opcao;
 
@@ -33,6 +32,7 @@ public class SistemaPrincipal {
             System.out.println("1 - Mecânicos");
             System.out.println("2 - Veículos");
             System.out.println("3 - Peças");
+            System.out.println("4 - Ordem de Serviço");
             System.out.println("0 - Sair");
 
             System.out.print("Opção: ");
@@ -43,27 +43,26 @@ public class SistemaPrincipal {
             switch (opcao) {
 
                 case 1:
-
                     MenuMecanico.abrirMenuMecanico();
                     break;
 
                 case 2:
-
                     MenuVeiculo.abrirMenuVeiculo();
                     break;
 
                 case 3:
-
                     MenuPeca.abrirMenuPeca();
                     break;
 
-                case 0:
+                case 4:
+                    MenuOS.abrirMenuOS();
+                    break;
 
+                case 0:
                     System.out.println("Sistema encerrado.");
                     break;
 
                 default:
-
                     System.out.println("Opção inválida.");
             }
 
