@@ -2,9 +2,9 @@ package classepeca;
 
 public class Peca {
 
-    String id;
-    String nome;
-    String tipo;
-    double valor;
-    int quantidade;
+    public String id;
+    public String nome;
+    public String tipo;
+    public double valor;
+    public int quantidade;
 }

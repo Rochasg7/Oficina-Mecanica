@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import classrelatorios.MenuRelatorios;
+
 import classemecanico.MenuMecanico;
 import classemecanico.PersistenciaMecanico;
 
@@ -33,6 +35,7 @@ public class SistemaPrincipal {
             System.out.println("2 - Veículos");
             System.out.println("3 - Peças");
             System.out.println("4 - Ordem de Serviço");
+            System.out.println("5 - Relatórios");
             System.out.println("0 - Sair");
 
             System.out.print("Opção: ");
@@ -56,6 +59,10 @@ public class SistemaPrincipal {
 
                 case 4:
                     MenuOS.abrirMenuOS();
+                    break;
+
+                case 5:
+                    MenuRelatorios.abrirMenuRelatorios();
                     break;
 
                 case 0:
