@@ -70,5 +70,26 @@ public class Relatorios {
 
     public static void relatorioFaturamentoPecas() {
 
+    double totalFaturado = 0;
+
+    for (int i = 0; i < CadastroOS.totalOS; i++) {
+
+        ordemdeservico os = CadastroOS.ordens[i];
+
+        for (int j = 0; j < os.totalItens; j++) {
+
+            String idPeca = os.idsPecas[j];
+            int quantidade = os.qtdsPecas[j];
+
+            Peca peca = CadastroPeca.buscarPecaPorId(idPeca);
+
+                if (peca != null) {
+                    totalFaturado += quantidade * peca.valor;
+                }
+            }
+        }
+
+        System.out.println("\n===== FATURAMENTO DE PEÇAS =====");
+        System.out.println("Total faturado: R$ " + totalFaturado);
     }
 }

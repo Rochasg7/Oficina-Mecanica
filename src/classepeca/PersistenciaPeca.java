@@ -23,8 +23,8 @@ public class PersistenciaPeca {
                                 p.nome + ";" +
                                 p.tipo + ";" +
                                 p.valor + ";" +
-                                p.quantidade + ";" 
-                                );
+                                p.quantidade 
+                            );
 
                 writer.write("\n");
             }
@@ -51,7 +51,7 @@ public class PersistenciaPeca {
                 String linha = leitor.nextLine();
                 String[] p = linha.split(";");
 
-                if (p.length < 6)
+                if (p.length < 5)
                     continue;
 
                 Peca peca = new Peca();
